@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C80817D227A09CEC003EA7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80817D127A09CEC003EA7F1 /* AppDelegate.swift */; };
 		C80817D427A09CEC003EA7F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80817D327A09CEC003EA7F1 /* SceneDelegate.swift */; };
-		C80817D627A09CEC003EA7F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80817D527A09CEC003EA7F1 /* ViewController.swift */; };
 		C80817D927A09CEC003EA7F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C80817D727A09CEC003EA7F1 /* Main.storyboard */; };
 		C80817DB27A09CED003EA7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80817DA27A09CED003EA7F1 /* Assets.xcassets */; };
 		C80817DE27A09CED003EA7F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C80817DC27A09CED003EA7F1 /* LaunchScreen.storyboard */; };
+		C80817E727A0A307003EA7F1 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80817E627A0A307003EA7F1 /* Article.swift */; };
+		C80817E927A0A456003EA7F1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80817E827A0A456003EA7F1 /* Model.swift */; };
+		C87C434527A1E6E3008E7B8B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C434427A1E6E3008E7B8B /* TableViewController.swift */; };
+		C87C434927A225CB008E7B8B /* FirstNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C434827A225CB008E7B8B /* FirstNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C80817CE27A09CEC003EA7F1 /* hello, world.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello, world.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80817CE27A09CEC003EA7F1 /* MyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80817D127A09CEC003EA7F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C80817D327A09CEC003EA7F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C80817D527A09CEC003EA7F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C80817D827A09CEC003EA7F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C80817DA27A09CED003EA7F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C80817DD27A09CED003EA7F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C80817DF27A09CED003EA7F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C80817E627A0A307003EA7F1 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C80817E827A0A456003EA7F1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C87C434427A1E6E3008E7B8B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C87C434827A225CB008E7B8B /* FirstNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,7 @@
 		C80817CF27A09CEC003EA7F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C80817CE27A09CEC003EA7F1 /* hello, world.app */,
+				C80817CE27A09CEC003EA7F1 /* MyNews.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,23 +62,34 @@
 		C80817D027A09CEC003EA7F1 /* hello, world */ = {
 			isa = PBXGroup;
 			children = (
+				C80817E527A0A18D003EA7F1 /* model */,
 				C80817D127A09CEC003EA7F1 /* AppDelegate.swift */,
-				C80817D327A09CEC003EA7F1 /* SceneDelegate.swift */,
-				C80817D527A09CEC003EA7F1 /* ViewController.swift */,
+				C87C434427A1E6E3008E7B8B /* TableViewController.swift */,
+				C87C434827A225CB008E7B8B /* FirstNewsViewController.swift */,
 				C80817D727A09CEC003EA7F1 /* Main.storyboard */,
 				C80817DA27A09CED003EA7F1 /* Assets.xcassets */,
 				C80817DC27A09CED003EA7F1 /* LaunchScreen.storyboard */,
 				C80817DF27A09CED003EA7F1 /* Info.plist */,
+				C80817D327A09CEC003EA7F1 /* SceneDelegate.swift */,
 			);
 			path = "hello, world";
+			sourceTree = "<group>";
+		};
+		C80817E527A0A18D003EA7F1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C80817E627A0A307003EA7F1 /* Article.swift */,
+				C80817E827A0A456003EA7F1 /* Model.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C80817CD27A09CEC003EA7F1 /* hello, world */ = {
+		C80817CD27A09CEC003EA7F1 /* MyNews */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C80817E227A09CED003EA7F1 /* Build configuration list for PBXNativeTarget "hello, world" */;
+			buildConfigurationList = C80817E227A09CED003EA7F1 /* Build configuration list for PBXNativeTarget "MyNews" */;
 			buildPhases = (
 				C80817CA27A09CEC003EA7F1 /* Sources */,
 				C80817CB27A09CEC003EA7F1 /* Frameworks */,
@@ -82,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = "hello, world";
+			name = MyNews;
 			productName = "hello, world";
-			productReference = C80817CE27A09CEC003EA7F1 /* hello, world.app */;
+			productReference = C80817CE27A09CEC003EA7F1 /* MyNews.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,8 +119,8 @@
 					};
 				};
 			};
-			buildConfigurationList = C80817C927A09CEB003EA7F1 /* Build configuration list for PBXProject "hello, world" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = C80817C927A09CEB003EA7F1 /* Build configuration list for PBXProject "MyNews" */;
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -115,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C80817CD27A09CEC003EA7F1 /* hello, world */,
+				C80817CD27A09CEC003EA7F1 /* MyNews */,
 			);
 		};
 /* End PBXProject section */
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C80817D627A09CEC003EA7F1 /* ViewController.swift in Sources */,
+				C80817E927A0A456003EA7F1 /* Model.swift in Sources */,
+				C80817E727A0A307003EA7F1 /* Article.swift in Sources */,
+				C87C434927A225CB008E7B8B /* FirstNewsViewController.swift in Sources */,
 				C80817D227A09CEC003EA7F1 /* AppDelegate.swift in Sources */,
+				C87C434527A1E6E3008E7B8B /* TableViewController.swift in Sources */,
 				C80817D427A09CEC003EA7F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +174,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		C80817DC27A09CED003EA7F1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -292,6 +313,7 @@
 				DEVELOPMENT_TEAM = 8P286W4M79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hello, world/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MyNews;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +342,7 @@
 				DEVELOPMENT_TEAM = 8P286W4M79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hello, world/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MyNews;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -341,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C80817C927A09CEB003EA7F1 /* Build configuration list for PBXProject "hello, world" */ = {
+		C80817C927A09CEB003EA7F1 /* Build configuration list for PBXProject "MyNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C80817E027A09CED003EA7F1 /* Debug */,
@@ -350,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C80817E227A09CED003EA7F1 /* Build configuration list for PBXNativeTarget "hello, world" */ = {
+		C80817E227A09CED003EA7F1 /* Build configuration list for PBXNativeTarget "MyNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C80817E327A09CED003EA7F1 /* Debug */,
