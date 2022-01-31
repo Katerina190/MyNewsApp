@@ -37,7 +37,7 @@ struct Article {
     
     
     init(dictionary: Dictionary<String, Any>) {
-        author = dictionary["author"] as? String ?? "" //в случае если в строке автор будет нил, то он возьмет   пустую строку после ??
+        author = dictionary["author"] as? String ?? "" 
         title = dictionary["title"] as? String ?? ""
         description = dictionary["description"] as? String ?? ""
         url = dictionary["url"] as? String ?? ""

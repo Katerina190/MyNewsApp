@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SafariServices
 class FirstNewsViewController: UIViewController {
     
     var article: Article! // передавать из тейбл и на основании этой переменной заполняем все поля
@@ -20,8 +20,16 @@ class FirstNewsViewController: UIViewController {
     
     
     @IBAction func openButton(_ sender: Any) {
+        let safariVC = SFSafariViewController(url: URL(string: article.url)!)
+        present(safariVC, animated: true, completion: nil)
     }
     
+    @IBAction func telegaButton(_ sender: Any) {
+        let items:[Any] = [URL(string: article.url)!]
+        
+        let telega = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        self.present(telega, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +37,10 @@ class FirstNewsViewController: UIViewController {
         titleLabel.text = article.title
         descriptionLabel.text = article.description
         
+        if let urlImg = URL(string: article.urlToImage) {
+            if let data = try? Data(contentsOf: urlImg) {
+                imageNews.image = UIImage(data: data)
+            }
         // Do any additional setup after loading the view.
     }
     
@@ -43,4 +55,5 @@ class FirstNewsViewController: UIViewController {
     }
     */
 
+}
 }

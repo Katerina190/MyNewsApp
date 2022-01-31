@@ -62,7 +62,7 @@
 		C80817D027A09CEC003EA7F1 /* hello, world */ = {
 			isa = PBXGroup;
 			children = (
-				C80817E527A0A18D003EA7F1 /* model */,
+				C80817E527A0A18D003EA7F1 /* news */,
 				C80817D127A09CEC003EA7F1 /* AppDelegate.swift */,
 				C87C434427A1E6E3008E7B8B /* TableViewController.swift */,
 				C87C434827A225CB008E7B8B /* FirstNewsViewController.swift */,
@@ -75,13 +75,13 @@
 			path = "hello, world";
 			sourceTree = "<group>";
 		};
-		C80817E527A0A18D003EA7F1 /* model */ = {
+		C80817E527A0A18D003EA7F1 /* news */ = {
 			isa = PBXGroup;
 			children = (
 				C80817E627A0A307003EA7F1 /* Article.swift */,
 				C80817E827A0A456003EA7F1 /* Model.swift */,
 			);
-			path = model;
+			path = news;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +314,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hello, world/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MyNews;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -343,6 +344,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "hello, world/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MyNews;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
