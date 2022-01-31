@@ -10,12 +10,12 @@ import Foundation
 var articles: [Article] = []
 
 var urlToData: URL {
-    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"data.json" // эта команда вернет путь в диерктории пользователя, в лабрайри директорию
+    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"data.json" // back path to library
     let urlPath =  URL(fileURLWithPath: path)
     return urlPath
 }
 
-func loadNews(completionHandler: (() -> Void)?)     { // чтоб знать что новости распарсились
+func loadNews(completionHandler: (() -> Void)?)     {
     
     let url = URL(string: "https://newsapi.org/v2/everything?&apiKey=cc8801612b244f97801336bf4b7830c3")
     let session = URLSession(configuration: .default)
@@ -23,24 +23,24 @@ func loadNews(completionHandler: (() -> Void)?)     { // чтоб знать ч�
     let downloadTask = session.downloadTask(with: url! ) { (urlFile, response, error) in
         if url != nil {
             
-            try? FileManager.default.copyItem(at: urlFile!, to: urlToData) //новости загружены
+            try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
             
-            parseNews() //мы их распарсили
-            completionHandler?() // вызываем блок кода из тейбл и он тут отработает и таблицы обновится
+            parseNews()
+            completionHandler?() // table on
             
         }
-    } // create object
+    }
   
     downloadTask.resume() // on
 }
 func parseNews() {
    
     let data = try? Data(contentsOf: urlToData)
-    if data == nil { // один из способ не нарваться на нил
+    if data == nil {
         return
     }
     let rootDictionaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-    if rootDictionaryAny == nil { // проверка - если рутдиктионару равен нил то мы выходим из нашей функции (приложение не крешится, данные не отобразяться
+    if rootDictionaryAny == nil {
         return
     }
     

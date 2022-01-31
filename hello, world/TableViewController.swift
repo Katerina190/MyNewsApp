@@ -11,12 +11,12 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNews { // отправляем запрос на загрузку новостей
-            DispatchQueue.main.async { //чтоб запускался в основном потоке
-            self.tableView.reloadData() //обновляем представление, блоk   кода который будет выполняться когда новости загружены
-        } //при загрузке контроллера логично вызвать метод
+        loadNews { //load news
+            DispatchQueue.main.async {
+            self.tableView.reloadData()
+            }
+            }
         }
-    }
 
     // MARK: - Table view data source
 
@@ -34,32 +34,31 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // метод инициализации
+        // inicialization
         
-        let article = articles[indexPath.row] // получим новость для ячейки
+        let article = articles[indexPath.row] // take news for cell
         
-        cell.textLabel?.text = article.title // заполним ячейку
-        cell.detailTextLabel?.text = article.publishedAt // дата когда публиковали
+        cell.textLabel?.text = article.title
+        cell.detailTextLabel?.text = article.publishedAt
 
         return cell
     }
     
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // метод, нажимаем ячейку в таблице
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "firstTask", sender: self)
         
-        // переход от ферст таск к отправителю
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //подготовка к переходу
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "firstTask" {
             if let indexPath = tableView.indexPathForSelectedRow  {
                 (segue.destination as? FirstNewsViewController)?.article = articles[indexPath.row]
                 
-                tableView.deselectRow(at: indexPath, animated: true) //провериь на нил индекс пас и тогда уже норм
+                tableView.deselectRow(at: indexPath, animated: true)
             }
         }
-        //это наш контроллер firstnewsviewcontroller, делаем преобразование типов и говорим что это наш контроллер и перемнной арктикл присваеиваем значение выбранной ячейки
+    
     }
 
     /*

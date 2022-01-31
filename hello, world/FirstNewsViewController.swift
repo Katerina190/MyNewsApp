@@ -9,7 +9,7 @@ import UIKit
 import SafariServices
 class FirstNewsViewController: UIViewController {
     
-    var article: Article! // передавать из тейбл и на основании этой переменной заполняем все поля
+    var article: Article! 
     
     @IBOutlet weak var titleLabel: UILabel!
     
