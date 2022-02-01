@@ -25,6 +25,7 @@ func loadNews(completionHandler: (() -> Void)?)     {
             
             try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
             
+            
             parseNews()
             completionHandler?() // table on
             

@@ -24,12 +24,6 @@ class FirstNewsViewController: UIViewController {
         present(safariVC, animated: true, completion: nil)
     }
     
-    @IBAction func telegaButton(_ sender: Any) {
-        let items:[Any] = [URL(string: article.url)!]
-        
-        let telega = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        self.present(telega, animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

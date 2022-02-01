@@ -11,13 +11,13 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNews { //load news
+            loadNews { //load news
             DispatchQueue.main.async {
             self.tableView.reloadData()
             }
             }
         }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return articles.count
+        return articles.count // count elements
     }
 
     
@@ -38,7 +38,7 @@ class TableViewController: UITableViewController {
         
         let article = articles[indexPath.row] // take news for cell
         
-        cell.textLabel?.text = article.title
+        cell.textLabel?.text = article.title //название элемента
         cell.detailTextLabel?.text = article.publishedAt
 
         return cell
@@ -60,7 +60,8 @@ class TableViewController: UITableViewController {
         }
     
     }
-
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
