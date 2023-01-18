@@ -10,14 +10,14 @@ import Foundation
 var articles: [Article] = []
 
 var urlToData: URL {
-    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"data.json" // back path to library
+    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"/data.json" // back path to library
     let urlPath =  URL(fileURLWithPath: path)
     return urlPath
 }
 
 func loadNews(completionHandler: (() -> Void)?)     {
     
-    let url = URL(string: "https://newsapi.org/v2/everything?&apiKey=cc8801612b244f97801336bf4b7830c3")
+    let url = URL(string: "https://newsapi.org/v2/everything?q=tesla&from=2022-12-17&sortBy=publishedAt&apiKey=cc8801612b244f97801336bf4b7830c3")
     let session = URLSession(configuration: .default)
     
     let downloadTask = session.downloadTask(with: url! ) { (urlFile, response, error) in
